@@ -2,12 +2,18 @@
 <html>
   <head>
     <title>Messier Objects</title>
+    <style>
+      body {
+        background-color: blue;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <h1>Messier Objects</h1>
-    <ul>
-      <!-- List items will be added here by JavaScript -->
-    </ul>
+    <table>
+      <!-- Table rows will be added here by JavaScript -->
+    </table>
     <script>
       const messierObjects = [
         {
@@ -17,12 +23,18 @@
         // Add more objects here
       ];
 
-      const list = document.querySelector("ul");
+      const table = document.querySelector("table");
       for (let i = 0; i < messierObjects.length; i++) {
-        const li = document.createElement("li");
-        li.textContent = `${messierObjects[i].name}: ${messierObjects[i].type}`;
-        list.appendChild(li);
+        const tr = document.createElement("tr");
+        const nameTd = document.createElement("td");
+        nameTd.textContent = messierObjects[i].name;
+        tr.appendChild(nameTd);
+        const typeTd = document.createElement("td");
+        typeTd.textContent = messierObjects[i].type;
+        tr.appendChild(typeTd);
+        table.appendChild(tr);
       }
     </script>
   </body>
 </html>
+
