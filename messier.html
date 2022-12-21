@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Messier Objects</title>
+  </head>
+  <body>
+    <h1>Messier Objects</h1>
+    <ul>
+      <!-- List items will be added here by JavaScript -->
+    </ul>
+    <script>
+      const messierObjects = [
+        {
+          name: "M1",
+          type: "Supernova Remnant"
+        },
+        // Add more objects here
+      ];
+
+      const list = document.querySelector("ul");
+      for (let i = 0; i < messierObjects.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = `${messierObjects[i].name}: ${messierObjects[i].type}`;
+        list.appendChild(li);
+      }
+    </script>
+  </body>
+</html>
